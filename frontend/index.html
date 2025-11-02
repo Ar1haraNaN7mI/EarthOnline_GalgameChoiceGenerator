@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Galgame Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Status Display -->
+        <div class="status-bar">
+            <div class="status-indicator" id="statusIndicator">
+                <span class="status-icon">🎤</span>
+                <span class="status-text" id="statusText">等待识别语音...</span>
+            </div>
+        </div>
+
+        <!-- Voice Recognition Area -->
+        <div class="voice-area">
+            <button class="record-button" id="recordButton">
+                <span class="button-icon">🎤</span>
+                <span class="button-text">开始识别</span>
+            </button>
+            <div class="transcribed-text" id="transcribedText"></div>
+        </div>
+
+        <!-- Galgame Style Options Box -->
+        <div class="options-container" id="optionsContainer" style="display: none;">
+            <div class="options-box">
+                <div class="options-title">请选择回复：</div>
+                <div class="options-list">
+                    <div class="option-item" data-index="0" id="option0">
+                        <span class="option-number">1</span>
+                        <span class="option-text"></span>
+                    </div>
+                    <div class="option-item" data-index="1" id="option1">
+                        <span class="option-number">2</span>
+                        <span class="option-text"></span>
+                    </div>
+                    <div class="option-item" data-index="2" id="option2">
+                        <span class="option-number">3</span>
+                        <span class="option-text"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">正在生成回复选项...</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
